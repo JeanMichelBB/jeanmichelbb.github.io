@@ -197,7 +197,7 @@ footer {
   }
   
   .carousel-navigation {
-    position: fixed;
+    position: absolute;
     top: 25%;
     transform: translateY(-50%);
     font-size: 25px;

@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
 html {
@@ -176,27 +175,27 @@ footer {
     width: 100%;
     overflow: hidden;
     margin-bottom: 100px;
-  }
-  
-  .carousel-slide {
+}
+
+.carousel-slide {
     display: none;
     text-align: center;
-  }
-  
-  .carousel-slide img {
-    width: 80%; 
+}
+
+.carousel-slide img {
+    width: 80%;
     height: auto;
-  }
-  
-  .image-description {
+}
+
+.image-description {
     padding: 10px;
     position: absolute;
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
-  }
-  
-  .carousel-navigation {
+}
+
+.carousel-navigation {
     position: absolute;
     top: 25%;
     transform: translateY(-50%);
@@ -206,32 +205,53 @@ footer {
     color: #fff;
     cursor: pointer;
     padding: 10px;
-    animation: pulse 1s infinite; 
-  }
+    animation: pulse 1s infinite;
+}
 
-  @keyframes pulse {
+
+@keyframes pulse {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  
+
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  .carousel-navigation.prev {
+}
+
+.carousel-navigation.prev {
     left: 0;
     color: black;
-  }
-  
-  .carousel-navigation.next {
+}
+
+.carousel-navigation.next {
     right: 0;
     color: black;
-  }
-  @media screen and (min-width: 768px) {
+}
+.iframe-container {
+    width: 100%;
+    height: 100vh;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+iframe {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    right: 0;
+    left: 0;
+    border: none;
+}
+.article {
+    padding: 0 20px;
+}
+
+
+@media screen and (min-width: 768px) {
     .article {
         padding: 0 80px;
     }
@@ -244,16 +264,18 @@ footer {
     main {
         gap: 60px;
     }
+
     .carousel-navigation.prev {
         left: 6%;
         color: black;
-      }
-      
-      .carousel-navigation.next {
+    }
+
+    .carousel-navigation.next {
         right: 6%;
         color: black;
-      }
-      .carousel-navigation {
+    }
+
+    .carousel-navigation {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -263,9 +285,10 @@ footer {
         color: #fff;
         cursor: pointer;
         padding: 10px;
-        animation: pulse 1s infinite; 
-      }
-      .project-description {
+        animation: pulse 1s infinite;
+    }
+
+    .project-description {
         font-size: clamp(14px, 0.5rem + 2vw, 18px);
         font-weight: normal;
         color: #303030;
@@ -273,5 +296,20 @@ footer {
         text-align: justify;
         width: 100%;
         height: 100%;
+    }
+    .iframe-container {
+        width: 100%;
+        height: 100vh;
+        border: 2px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    iframe {
+        display: flex;
+        width: 100%;
+        height: 90svh;
+        right: 0;
+        left: 0;
+        border: none;
     }
 }

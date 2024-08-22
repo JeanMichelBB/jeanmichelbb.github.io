@@ -194,6 +194,15 @@ footer {
     display: block;
 }
 
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: bold;
+}
+
 @media screen and (min-width: 1024px) {
     .row-wrapper {
         display: flex;

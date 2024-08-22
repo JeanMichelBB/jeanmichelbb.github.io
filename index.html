@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,22 +36,30 @@
                 </div>
             </div>
             <a class="menu" href="#about">About</a>
+            <!-- <button id="languageButton">Translate</button> -->
         </nav>
     </header>
     <main>
         <section class="introduction">
+            <!-- <h1 id="welcomeMessage" data-language="en">Hello, welcome</h1> -->
             <h1>Hi, my name is Jean-Michel</h1>
             <h2>AI Full stack developer</h2>
         </section>
         <article class="about article" id="about">
             <h3 class="title">About</h3>
             <p>
-                As a bilingual full-stack developer with an AEC in Programmer Analyst from Lasalle College, I bring a diverse skill set to the table. My background includes experience as a manager at Jean Coutu pharmacy, along with work in photography and short films. I am adept at taking on new challenges and am highly organized, ensuring projects are completed efficiently and effectively. I also utilize diverse AI tools like OpenAI and Copilot to enhance my learning and application development process, continually growing my expertise in programming and contributing a unique perspective to the industry.
-             </p>
+                As a bilingual full-stack developer with an AEC in Programmer Analyst from Lasalle College, I bring a
+                diverse skill set to the table. My background includes experience as a manager at Jean Coutu pharmacy,
+                along with work in photography and short films. I am adept at taking on new challenges and am highly
+                organized, ensuring projects are completed efficiently and effectively. I also utilize diverse AI tools
+                like OpenAI and Copilot to enhance my learning and application development process, continually growing
+                my expertise in programming and contributing a unique perspective to the industry.
+            </p>
             <h4>TOOLS & SKILLS</h4>
             <ul>
                 <li>
-                    <strong>Programming Languages & Frameworks:</strong> HTML, CSS, JavaScript, TypeScript, Tailwind CSS, React, Fast API, Python
+                    <strong>Programming Languages & Frameworks:</strong> HTML, CSS, JavaScript, TypeScript, Tailwind
+                    CSS, React, Fast API, Python
                 </li>
                 <li>
                     <strong>Containerization & DevOps:</strong> Docker, Networking, Git, GitHub, Command Line
@@ -80,56 +89,67 @@
             <h3 class="title">Projects</h3>
 
             <h4 id="BotWhy" class="project-title">BotWhy</h4>
-            <iframe id="embedded-website" src="https://botwhy.sacenpapier.synology.me/"
+            <iframe id="embedded-website-botwhy" src="https://botwhy.sacenpapier.synology.me/"
                 title="Embedded Website"></iframe>
+            <p id="fallback-message-botwhy" style="display: none;">The BotWhy server is currently unavailable. Please
+                try again later.</p>
             <br>
             <ul>
                 <li> <a class="project-description" target="_blank"
-                        href="https://botwhy.sacenpapier.synology.me/">Website</a>
-                </li>
+                        href="https://botwhy.sacenpapier.synology.me/">Website</a></li>
                 <li> <a class="project-description" target="_blank"
-                        href="https://github.com/JeanMichelBB/BotWhy">GitHub</a>
-                </li>
-
+                        href="https://github.com/JeanMichelBB/BotWhy">GitHub</a></li>
             </ul>
             <br>
-            <p class="project-description">BotWhy is a versatile chatbot application that integrates OpenAI’s GPT-4o Mini, 
-                Google Authentication, React with Vite, and Python FastAPI, all powered by MySQL. It offers a seamless conversational 
-                interface with robust authentication, ensuring secure and interactive user experiences. Designed for modern deployments, 
+            <p class="project-description">
+                BotWhy is a versatile chatbot application that integrates OpenAI’s GPT-4o Mini,
+                Google Authentication, React with Vite, and Python FastAPI, all powered by MySQL. It offers a seamless
+                conversational
+                interface with robust authentication, ensuring secure and interactive user experiences. Designed for
+                modern deployments,
                 the application is fully Dockerized for easy management and scalability.
             </p>
 
             <h4 id="TwitterClone" class="project-title">Twitter Clone</h4>
-            <iframe id="embedded-website" src="https://twitterclone.sacenpapier.synology.me/"
+            <iframe id="embedded-website-twitter" src="https://twitterclone.sacenpapier.synology.me/"
                 title="Embedded Website"></iframe>
+            <p id="fallback-message-twitter" style="display: none;">The Twitter Clone server is currently unavailable.
+                Please try again later.</p>
             <br>
             <ul>
                 <li> <a class="project-description" target="_blank"
-                        href="https://twitterclone.sacenpapier.synology.me/">Website</a>
-                </li>
+                        href="https://twitterclone.sacenpapier.synology.me/">Website</a></li>
                 <li> <a class="project-description" target="_blank"
-                        href="https://github.com/JeanMichelBB/twitterclone">GitHub</a>
-                </li>
-
+                        href="https://github.com/JeanMichelBB/twitterclone">GitHub</a></li>
             </ul>
             <br>
-            <p class="project-description">A Twitter clone developed with React, Fast API, and MySQL. This project
-                includes all essential features of Twitter, such as creating and deleting tweets, following and
-                unfollowing users, and liking tweets. The application is hosted on a ubuntu server.
+            <p class="project-description">
+                A Twitter clone developed with React, Fast API, and MySQL. This project includes all essential features
+                of Twitter,
+                such as creating and deleting tweets, following and unfollowing users, and liking tweets. The
+                application is hosted on a ubuntu server.
             </p>
-            
-            <h4 id="GrafanaDashboard" class="project-title">Grafana Dashboard</h4> 
+
+            <h4 id="GrafanaDashboard" class="project-title">Grafana Dashboard</h4>
             <div class="grafana-container">
-                <iframe src="https://grafana.sacenpapier.synology.me/dashboard/snapshot/VrWQlmKcKr1Iu95iY8rZjyx3GgoE0fS4?orgId=1" class="grafana-iframe"></iframe>
+                <iframe id="embedded-website-grafana"
+                    src="https://grafana.sacenpapier.synology.me/dashboard/snapshot/VrWQlmKcKr1Iu95iY8rZjyx3GgoE0fS4?orgId=1"
+                    class="grafana-iframe"></iframe>
+                <p id="fallback-message-grafana" style="display: none;">The Grafana Dashboard is currently unavailable.
+                    Please try again later.</p>
             </div>
-            
-            
+
             <div class="project-description">
-                Explore a detailed view of my Linux Ubuntu server’s performance and project status through Grafana. This dashboard provides real-time insights into server metrics, including CPU usage, memory consumption, disk I/O, and network activity. Additionally, it offers comprehensive monitoring of all deployed Docker projects, giving you an overview of container performance, resource usage, and health metrics. Leveraging Grafana’s powerful visualization capabilities, this setup ensures that every aspect of server operation and project deployment is tracked and easily accessible.
+                Explore a detailed view of my Linux Ubuntu server’s performance and project status through Grafana. This
+                dashboard provides real-time insights into server metrics, including CPU usage, memory consumption, disk
+                I/O, and network activity. Additionally, it offers comprehensive monitoring of all deployed Docker
+                projects, giving you an overview of container performance, resource usage, and health metrics.
+                Leveraging Grafana’s powerful visualization capabilities, this setup ensures that every aspect of server
+                operation and project deployment is tracked and easily accessible.
             </div>
 
             <a target="_blank" href="https://github.com/JeanMichelBB/SimpleStyle">
-                <h4 id="SimpleStyle" class="project-title">SimpleStyle</h4> 
+                <h4 id="SimpleStyle" class="project-title">SimpleStyle</h4>
             </a>
             <div class="carousel-container">
                 <button class="carousel-navigation prev" onclick="prevSlide()">❮</button>
@@ -204,7 +224,7 @@
                 <div class="row-wrapper">
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/image_uploader">
-                            <h4 id="ImageUploader" class="project-title">Image uploader</h4> 
+                            <h4 id="ImageUploader" class="project-title">Image uploader</h4>
                             <img src="img/ImageUploader.png" alt="Image uploader">
                             <p class="project-description">React Project.</p>
                         </a>
@@ -212,7 +232,7 @@
 
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/ToDoListAPI">
-                            <h4 id="TodoApplication" class="project-title">Todo application</h4> 
+                            <h4 id="TodoApplication" class="project-title">Todo application</h4>
                             <img src="img/Todo.png" alt="Todo application">
                             <p class="project-description">API Project.</p>
                         </a>
@@ -221,7 +241,7 @@
                 <div class="row-wrapper">
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/Android-Project">
-                            <h4 id="Moviepicks" class="project-title">Moviepicks</h4> 
+                            <h4 id="Moviepicks" class="project-title">Moviepicks</h4>
                             <img src="img/moviepicks.png" alt="Image uploader">
                             <p class="project-description">Android Project as part of the course MOBILE DEVELOPMENT.</p>
                         </a>
@@ -229,7 +249,7 @@
 
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/Randoms-Series-Project">
-                            <h4 id="RandomShowGenerator" class="project-title">Random Show Generator</h4> 
+                            <h4 id="RandomShowGenerator" class="project-title">Random Show Generator</h4>
                             <img src="img/Show.png" alt="Todo application">
                             <p class="project-description">Java Project developed with Spring Boot.</p>
                         </a>
@@ -238,7 +258,7 @@
                 <div class="row-wrapper">
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/My_Django_blog">
-                            <h4 id="MyDjangoBlog" class="project-title">My Django blog</h4> 
+                            <h4 id="MyDjangoBlog" class="project-title">My Django blog</h4>
                             <img src="img/MyDjangoblog.png" alt="My Django blog">
                             <p class="project-description">Python Project as part of the course SCRIPTING LANGUAGE.</p>
                         </a>
@@ -246,7 +266,7 @@
 
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/ios-project">
-                            <h4 id="Pokedex" class="project-title">Pokedex</h4> 
+                            <h4 id="Pokedex" class="project-title">Pokedex</h4>
                             <img src="img/Pokedex.png" alt="Pokedex">
                             <p class="project-description">Swift Project as part of the course IOS MOBILE DEVELOPMENT.
                             </p>
@@ -256,7 +276,7 @@
                 <div class="row-wrapper">
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/php-kids-game">
-                            <h4 id="KidsGame" class="project-title">Kid's Game</h4> 
+                            <h4 id="KidsGame" class="project-title">Kid's Game</h4>
                             <img src="img/kidsGame.png" alt="Kid's Game">
                             <p class="project-description">PHP Project as part of the course WEB SERVER APPLICATIONS
                                 DEVELOPMENT.</p>
@@ -265,7 +285,7 @@
 
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/studentEnrolment">
-                            <h4 id="StudentEnrollment" class="project-title">Student Enrollment</h4> 
+                            <h4 id="StudentEnrollment" class="project-title">Student Enrollment</h4>
                             <img src="img/studentEnrolment.png" alt="Student Enrollment">
                             <p class="project-description">C# Project as part of the course MULTI-TIER APPLICATIONS
                                 DEVELOPMENT. <!--3-tiers C#, Windows Form, ADO.NET application--> </p>
@@ -275,7 +295,7 @@
                 <div class="row-wrapper">
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/final-project-web">
-                            <h4 id="PropertyRental" class="project-title">Property Rental</h4> 
+                            <h4 id="PropertyRental" class="project-title">Property Rental</h4>
                             <img src="img/Rental.png" alt="Image uploader">
                             <p class="project-description">C# Project as part of the course WEB APPLICATIONS
                                 DEVELOPMENT.</p>
@@ -284,7 +304,7 @@
 
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/jeanmichelbb.github.io">
-                            <h4 id="MyWebsite" class="project-title">My website</h4> 
+                            <h4 id="MyWebsite" class="project-title">My website</h4>
                             <img src="img/website.png" alt="Website">
                             <p class="project-description">My website developed with HTML, and CSS.</p>
                         </a>

@@ -161,6 +161,10 @@ footer {
     font-size: clamp(14px, 0.5rem + 2vw, 18px);
     font-weight: normal;
     color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 /* Style for the Projects dropdown */

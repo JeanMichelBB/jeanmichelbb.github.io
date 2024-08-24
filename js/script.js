@@ -2,18 +2,31 @@
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".carousel-slide");
   let currentSlide = 0;
-  
-  function toggleLanguage() {
-    const welcomeMessage = document.getElementById('welcomeMessage');
-    const currentLanguage = welcomeMessage.getAttribute('data-language');
+  let translations = {};
 
-    if (currentLanguage === 'en') {
-      welcomeMessage.textContent = 'Bonjour, bienvenue';
-      welcomeMessage.setAttribute('data-language', 'fr');
-    } else {
-      welcomeMessage.textContent = 'Hello, welcome';
-      welcomeMessage.setAttribute('data-language', 'en');
-    }
+  fetch('translations.json')
+    .then(response => response.json())
+    .then(data => {
+      translations = data; // Assign the fetched data to the translations variable
+    })
+    .catch(error => console.error('Error fetching translations:', error));
+
+  function toggleLanguage() {
+    const elements = document.querySelectorAll('[data-language]');
+    const currentLanguage = elements[0].getAttribute('data-language');
+    const newLanguage = currentLanguage === 'en' ? 'fr' : 'en';
+    const languageButton = document.getElementById('languageButton');
+
+    elements.forEach(element => {
+      const key = element.id;
+      if (translations[newLanguage] && translations[newLanguage][key]) {
+        element.textContent = translations[newLanguage][key];
+        element.setAttribute('data-language', newLanguage);
+      }
+    });
+
+    // Update the button text to indicate the next language toggle
+    languageButton.textContent = currentLanguage;
   }
 
   // Attach the language toggle function to the button
@@ -95,11 +108,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // For BotWhy iframe
-  handleIframeLoad('embedded-website-botwhy', 'fallback-message-botwhy', 'https://botwhy.sacenpapier.synology.me/');
+  handleIframeLoad('embedded-website-botwhy', 'fallbackMessageBotwhy', 'https://botwhy.sacenpapier.synology.me/');
 
   // For Twitter Clone iframe
-  handleIframeLoad('embedded-website-twitter', 'fallback-message-twitter', 'https://twitterclone.sacenpapier.synology.me/');
+  handleIframeLoad('embedded-website-twitter', 'fallbackMessageTwitter', 'https://twitterclone.sacenpapier.synology.me/');
 
   // For Grafana
-  handleIframeLoad('embedded-website-grafana', 'fallback-message-grafana', 'https://grafana.sacenpapier.synology.me/');
+  handleIframeLoad('embedded-website-grafana', 'fallbackMessageGrafana', 'https://grafana.sacenpapier.synology.me/');
 });

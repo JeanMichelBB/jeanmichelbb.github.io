@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(response => response.json())
     .then(data => {
       translations = data; // Assign the fetched data to the translations variable
-      
+
       // Determine the current language
       const language = 'en'; // Replace with logic to get the user's language
       text = translations[language].typingText;
@@ -28,31 +28,31 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(error => console.error('Error fetching translations:', error));
 
-    function toggleLanguage() {
-      const elements = document.querySelectorAll('[data-language]');
-      const currentLanguage = elements[0]?.getAttribute('data-language');
-      const newLanguage = currentLanguage === 'en' ? 'fr' : 'en';
-      const languageButton = document.getElementById('languageButton');
-  
-      elements.forEach(element => {
-        const key = element.id;
-        if (translations[newLanguage] && translations[newLanguage][key]) {
-          element.textContent = translations[newLanguage][key];
-          element.setAttribute('data-language', newLanguage);
-        }
-      });
-  
-      // Update the button text to indicate the next language toggle
-      if (languageButton) {
-        languageButton.textContent = newLanguage;
+  function toggleLanguage() {
+    const elements = document.querySelectorAll('[data-language]');
+    const currentLanguage = elements[0]?.getAttribute('data-language');
+    const newLanguage = currentLanguage === 'en' ? 'fr' : 'en';
+    const languageButton = document.getElementById('languageButton');
+
+    elements.forEach(element => {
+      const key = element.id;
+      if (translations[newLanguage] && translations[newLanguage][key]) {
+        element.textContent = translations[newLanguage][key];
+        element.setAttribute('data-language', newLanguage);
       }
-  
-      // Update and retype the typing text
-      text = translations[newLanguage].typingText;
-      textElement.textContent = ''; // Clear current text
-      index = 0; // Reset index
-      type(); // Start typing effect
+    });
+
+    // Update the button text to indicate the next language toggle
+    if (languageButton) {
+      languageButton.textContent = newLanguage;
     }
+
+    // Update and retype the typing text
+    text = translations[newLanguage].typingText;
+    textElement.textContent = ''; // Clear current text
+    index = 0; // Reset index
+    type(); // Start typing effect
+  }
 
   // Attach the language toggle function to the button
   const languageButton = document.querySelector("#languageButton");
@@ -106,12 +106,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!iframe || !fallbackContainer) return;
 
     // Check if the server is reachable
-    function checkServerStatus(url) {
-      return fetch(url, { method: 'HEAD' })
-        .then(response => {
-          if (!response.ok) throw new Error('Server not reachable');
-          return true;
-        })
+    function checkServerStatus(url, timeout = 5000) { // 5 seconds timeout
+      return Promise.race([
+        fetch(url, { method: 'HEAD' })
+          .then(response => response.ok),
+        new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), timeout))
+      ])
         .catch(error => {
           console.error('Server is down:', error);
           return false;

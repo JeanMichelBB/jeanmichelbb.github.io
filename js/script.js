@@ -74,11 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  function handleIframeLoad(iframeId, fallbackMessageId, serverUrl) {
+  function handleIframeLoad(iframeId, fallbackContainerId, serverUrl) {
     const iframe = document.getElementById(iframeId);
-    const fallbackMessage = document.getElementById(fallbackMessageId);
+    const fallbackContainer = document.getElementById(fallbackContainerId);
 
-    if (!iframe || !fallbackMessage) return;
+    if (!iframe || !fallbackContainer) return;
 
     // Check if the server is reachable
     function checkServerStatus(url) {
@@ -97,22 +97,20 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(isUp => {
         if (isUp) {
           iframe.style.display = "block";
-          fallbackMessage.style.display = "none";
+          fallbackContainer.style.display = "none";
         } else {
           iframe.style.display = "none";
-          fallbackMessage.style.display = "block";
+          fallbackContainer.style.display = "block";
         }
       });
-
-    // The iframe element doesn't always trigger the error event. So rely on visibility check.
   }
 
   // For BotWhy iframe
-  handleIframeLoad('embedded-website-botwhy', 'fallbackMessageBotwhy', 'https://botwhy.sacenpapier.synology.me/');
+  handleIframeLoad('embedded-website-botwhy', 'fallbackContainerBotwhy', 'https://botwhy.sacenpapier.synology.me/');
 
   // For Twitter Clone iframe
-  handleIframeLoad('embedded-website-twitter', 'fallbackMessageTwitter', 'https://twitterclone.sacenpapier.synology.me/');
+  handleIframeLoad('embedded-website-twitter', 'fallbackContainerTwitter', 'https://twitterclone.sacenpapier.synology.me/');
 
-  // For Grafana
-  handleIframeLoad('embedded-website-grafana', 'fallbackMessageGrafana', 'https://grafana.sacenpapier.synology.me/');
+  // For Grafana iframe
+  handleIframeLoad('embedded-website-grafana', 'fallbackContainerGrafana', 'https://grafana.sacenpapier.synology.me/');
 });

@@ -294,6 +294,23 @@ iframe {
     padding: 0 20px;
 }
 
+.fallbackMessage {
+    color: #303030;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+.fallbackImage {
+    width: 100%;
+    height: auto;
+}
+
 
 @media screen and (min-width: 768px) {
     .article {

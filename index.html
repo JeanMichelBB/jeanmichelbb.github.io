@@ -1,6 +1,7 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Jean-Michel site</title>
 </head>
+
 <body>
     <header id="header" class="site-header">
         <div class="image-cropper">
@@ -52,7 +54,7 @@
                 like OpenAI and Copilot to enhance my learning and application development process, continually growing
                 my expertise in programming and contributing a unique perspective to the industry.
             </p>
-            <h4 id="skills" class="subtitle" data-language="en" >TOOLS & SKILLS</h4>
+            <h4 id="skills" class="subtitle" data-language="en">TOOLS & SKILLS</h4>
             <ul>
                 <li id="programmingLanguages" data-language="en">
                     <strong>Programming Languages & Frameworks:</strong> HTML, CSS, JavaScript, TypeScript, Tailwind
@@ -87,12 +89,17 @@
             <h4 id="BotWhy" class="project-title" id="BotWhy" data-language="en">BotWhy</h4>
             <iframe id="embedded-website-botwhy" src="https://botwhy.sacenpapier.synology.me/"
                 title="Embedded Website"></iframe>
-            <p class="fallbackMessage" id="fallbackMessageBotwhy" data-language="en" style="display: none;">The BotWhy server is currently unavailable. Please
-                try again later.</p>
+            <div id="fallbackContainerBotwhy" class="fallback-container" style="display: none;">
+                <p class="fallbackMessage" id="fallbackMessageBotwhy" data-language="en">The
+                    BotWhy
+                    server is currently unavailable. Please
+                    try again later.</p>
+                <img class="fallbackImage" src="img/botwhy.png">
+            </div>
             <br>
             <ul>
-                <li> <a class="project-description" target="_blank"
-                        href="https://botwhy.sacenpapier.synology.me/" id="botwhyWebsite" data-language="en">Website</a></li>
+                <li> <a class="project-description" target="_blank" href="https://botwhy.sacenpapier.synology.me/"
+                        id="botwhyWebsite" data-language="en">Website</a></li>
                 <li> <a class="project-description" target="_blank"
                         href="https://github.com/JeanMichelBB/BotWhy">GitHub</a></li>
             </ul>
@@ -109,12 +116,16 @@
             <h4 id="TwitterClone" class="project-title" id="TwitterClone" data-language="en">Twitter Clone</h4>
             <iframe id="embedded-website-twitter" src="https://twitterclone.sacenpapier.synology.me/"
                 title="Embedded Website"></iframe>
-            <p class="fallbackMessage" id="fallbackMessageTwitter" data-language="en" style="display: none;">The Twitter Clone server is currently unavailable.
-                Please try again later.</p>
+            <div id="fallbackContainerTwitter" class="fallback-container" style="display: none;">
+                <p class="fallbackMessage" id="fallbackMessageTwitter" data-language="en">The
+                    Twitter Clone server is currently unavailable.
+                    Please try again later.</p>
+                <img class="fallbackImage" src="img/x.png" alt="Project 1">
+            </div>
             <br>
             <ul>
-                <li> <a class="project-description" target="_blank"
-                        href="https://twitterclone.sacenpapier.synology.me/" id="twitterWebsite" data-language="en">Website</a></li>
+                <li> <a class="project-description" target="_blank" href="https://twitterclone.sacenpapier.synology.me/"
+                        id="twitterWebsite" data-language="en">Website</a></li>
                 <li> <a class="project-description" target="_blank"
                         href="https://github.com/JeanMichelBB/twitterclone">GitHub</a></li>
             </ul>
@@ -126,13 +137,18 @@
                 application is hosted on a ubuntu server.
             </p>
 
-            <h4 id="GrafanaDashboard" class="project-title" id="GrafanaDashboard" data-language="en">Grafana Dashboard</h4>
+            <h4 id="GrafanaDashboard" class="project-title" id="GrafanaDashboard" data-language="en">Grafana Dashboard
+            </h4>
             <div class="grafana-container">
                 <iframe id="embedded-website-grafana"
                     src="https://grafana.sacenpapier.synology.me/dashboard/snapshot/VrWQlmKcKr1Iu95iY8rZjyx3GgoE0fS4?orgId=1"
                     class="grafana-iframe"></iframe>
-                <p class="fallbackMessage" id="fallbackMessageGrafana" data-language="en" style="display: none;">The Grafana Dashboard is currently unavailable.
-                    Please try again later.</p>
+                <div id="fallbackContainerGrafana" class="fallback-container" style="display: none;">
+                    <p class="fallbackMessage" id="fallbackMessageGrafana" data-language="en">The
+                        Grafana Dashboard is currently unavailable.
+                        Please try again later.</p>
+                    <!-- <img class="fallbackImage" src="img/grafana.png"> -->
+                </div>
             </div>
 
             <div class="project-description" id="grafanaDescription" data-language="en">
@@ -154,9 +170,11 @@
                     <div class="carousel-slide">
                         <img src="img/Screenshot1.png" alt="Project 1">
                         <div class="project-description" id="slide1" data-language="en">Homepage of SimpleStyle:
-                            <p id="slide1a" data-language="en">A visually appealing homepage for SimpleStyle showcasing various products and categories.
+                            <p id="slide1a" data-language="en">A visually appealing homepage for SimpleStyle showcasing
+                                various products and categories.
                             </p>
-                            <p id="slide1b" data-language="en">This application is powered by React, Fast API, and Firebase. All essential functions are
+                            <p id="slide1b" data-language="en">This application is powered by React, Fast API, and
+                                Firebase. All essential functions are
                                 operational. Click on the arrow to see more.</p>
                         </div>
                     </div>
@@ -220,7 +238,8 @@
                 <div class="row-wrapper">
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/image_uploader">
-                            <h4 id="ImageUploader" class="project-title" id="ImageUploader" data-language="en">Image uploader</h4>
+                            <h4 id="ImageUploader" class="project-title" id="ImageUploader" data-language="en">Image
+                                uploader</h4>
                             <img src="img/ImageUploader.png" alt="Image uploader">
                             <p class="project-description" id="imageDescription" data-language="en">React Project.</p>
                         </a>
@@ -228,7 +247,8 @@
 
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/ToDoListAPI">
-                            <h4 id="TodoApplication" class="project-title" id="TodoApplication" data-language="en">Todo Application</h4>
+                            <h4 id="TodoApplication" class="project-title" id="TodoApplication" data-language="en">Todo
+                                Application</h4>
                             <img src="img/Todo.png" alt="Todo application">
                             <p class="project-description" id="todoDescription" data-language="en">API Project.</p>
                         </a>
@@ -239,24 +259,29 @@
                         <a target="_blank" href="https://github.com/JeanMichelBB/Android-Project">
                             <h4 id="Moviepicks" class="project-title" id="Moviepicks" data-language="en">Moviepicks</h4>
                             <img src="img/moviepicks.png" alt="Image uploader">
-                            <p class="project-description" id="movieDescription" data-language="en">Android Project as part of the course MOBILE DEVELOPMENT.</p>
+                            <p class="project-description" id="movieDescription" data-language="en">Android Project as
+                                part of the course MOBILE DEVELOPMENT.</p>
                         </a>
                     </li>
 
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/Randoms-Series-Project">
-                            <h4 id="RandomShowGenerator" class="project-title" id="RandomShowGenerator" data-language="en">Random Show Generator</h4>
+                            <h4 id="RandomShowGenerator" class="project-title" id="RandomShowGenerator"
+                                data-language="en">Random Show Generator</h4>
                             <img src="img/Show.png" alt="Todo application">
-                            <p class="project-description" id="randomDescription" data-language="en">Java Project developed with Spring Boot.</p>
+                            <p class="project-description" id="randomDescription" data-language="en">Java Project
+                                developed with Spring Boot.</p>
                         </a>
                     </li>
                 </div>
                 <div class="row-wrapper">
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/My_Django_blog">
-                            <h4 id="MyDjangoBlog" class="project-title" id="MyDjangoBlog" data-language="en">My Django blog</h4>
+                            <h4 id="MyDjangoBlog" class="project-title" id="MyDjangoBlog" data-language="en">My Django
+                                blog</h4>
                             <img src="img/MyDjangoblog.png" alt="My Django blog">
-                            <p class="project-description" id="djangoDescription" data-language="en">Python Project as part of the course SCRIPTING LANGUAGE.</p>
+                            <p class="project-description" id="djangoDescription" data-language="en">Python Project as
+                                part of the course SCRIPTING LANGUAGE.</p>
                         </a>
                     </li>
 
@@ -264,7 +289,8 @@
                         <a target="_blank" href="https://github.com/JeanMichelBB/ios-project">
                             <h4 id="Pokedex" class="project-title" id="Pokedex" data-language="en">Pokedex</h4>
                             <img src="img/Pokedex.png" alt="Pokedex">
-                            <p class="project-description" id="pokedexDescription" data-language="en">Swift Project as part of the course IOS MOBILE DEVELOPMENT.
+                            <p class="project-description" id="pokedexDescription" data-language="en">Swift Project as
+                                part of the course IOS MOBILE DEVELOPMENT.
                             </p>
                         </a>
                     </li>
@@ -274,16 +300,19 @@
                         <a target="_blank" href="https://github.com/JeanMichelBB/php-kids-game">
                             <h4 id="KidsGame" class="project-title" id="KidsGame" data-language="en">Kid's Game</h4>
                             <img src="img/kidsGame.png" alt="Kid's Game">
-                            <p class="project-description" id="kidsDescription" data-language="en">PHP Project as part of the course WEB SERVER APPLICATIONS
+                            <p class="project-description" id="kidsDescription" data-language="en">PHP Project as part
+                                of the course WEB SERVER APPLICATIONS
                                 DEVELOPMENT.</p>
                         </a>
                     </li>
 
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/studentEnrolment">
-                            <h4 id="StudentEnrollment" class="project-title" id="StudentEnrollment" data-language="en">Student Enrollment</h4>
+                            <h4 id="StudentEnrollment" class="project-title" id="StudentEnrollment" data-language="en">
+                                Student Enrollment</h4>
                             <img src="img/studentEnrolment.png" alt="Student Enrollment">
-                            <p class="project-description" id="studentDescription" data-language="en">C# Project as part of the course MULTI-TIER APPLICATIONS
+                            <p class="project-description" id="studentDescription" data-language="en">C# Project as part
+                                of the course MULTI-TIER APPLICATIONS
                                 DEVELOPMENT. </p>
                         </a>
                     </li>
@@ -291,9 +320,11 @@
                 <div class="row-wrapper">
                     <li class="project">
                         <a target="_blank" href="https://github.com/JeanMichelBB/final-project-web">
-                            <h4 id="PropertyRental" class="project-title" id="PropertyRental" data-language="en">Property Rental</h4>
+                            <h4 id="PropertyRental" class="project-title" id="PropertyRental" data-language="en">
+                                Property Rental</h4>
                             <img src="img/Rental.png" alt="Image uploader">
-                            <p class="project-description" id="propertyDescription" data-language="en">C# Project as part of the course WEB APPLICATIONS
+                            <p class="project-description" id="propertyDescription" data-language="en">C# Project as
+                                part of the course WEB APPLICATIONS
                                 DEVELOPMENT.</p>
                         </a>
                     </li>
@@ -302,7 +333,8 @@
                         <a target="_blank" href="https://github.com/JeanMichelBB/jeanmichelbb.github.io">
                             <h4 id="MyWebsite" class="project-title" id="MyWebsite" data-language="en">My website</h4>
                             <img src="img/website.png" alt="Website">
-                            <p class="project-description" id="websiteDescription" data-language="en">My website developed with HTML, and CSS.</p>
+                            <p class="project-description" id="websiteDescription" data-language="en">My website
+                                developed with HTML, and CSS.</p>
                         </a>
                     </li>
                 </div>
@@ -332,7 +364,8 @@
         <a href="#header">▲</a>
     </div>
     <footer>
-        <p>&copy; </p><p class="credits" id="credits" data-language="en">2024 - Made by Jean-Michel Bérubé</p>
+        <p>&copy; </p>
+        <p class="credits" id="credits" data-language="en">2024 - Made by Jean-Michel Bérubé</p>
     </footer>
     <script src="js/script.js"></script>
 </body>

@@ -4,30 +4,55 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
   let translations = {};
 
+  const textElement = document.getElementById('typingText');
+  let text = '';
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      textElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 50); // Adjust speed here
+    }
+  }
+
   fetch('translations.json')
     .then(response => response.json())
     .then(data => {
       translations = data; // Assign the fetched data to the translations variable
+      
+      // Determine the current language
+      const language = 'en'; // Replace with logic to get the user's language
+      text = translations[language].typingText;
+      type();
     })
     .catch(error => console.error('Error fetching translations:', error));
 
-  function toggleLanguage() {
-    const elements = document.querySelectorAll('[data-language]');
-    const currentLanguage = elements[0].getAttribute('data-language');
-    const newLanguage = currentLanguage === 'en' ? 'fr' : 'en';
-    const languageButton = document.getElementById('languageButton');
-
-    elements.forEach(element => {
-      const key = element.id;
-      if (translations[newLanguage] && translations[newLanguage][key]) {
-        element.textContent = translations[newLanguage][key];
-        element.setAttribute('data-language', newLanguage);
+    function toggleLanguage() {
+      const elements = document.querySelectorAll('[data-language]');
+      const currentLanguage = elements[0]?.getAttribute('data-language');
+      const newLanguage = currentLanguage === 'en' ? 'fr' : 'en';
+      const languageButton = document.getElementById('languageButton');
+  
+      elements.forEach(element => {
+        const key = element.id;
+        if (translations[newLanguage] && translations[newLanguage][key]) {
+          element.textContent = translations[newLanguage][key];
+          element.setAttribute('data-language', newLanguage);
+        }
+      });
+  
+      // Update the button text to indicate the next language toggle
+      if (languageButton) {
+        languageButton.textContent = newLanguage;
       }
-    });
-
-    // Update the button text to indicate the next language toggle
-    languageButton.textContent = currentLanguage;
-  }
+  
+      // Update and retype the typing text
+      text = translations[newLanguage].typingText;
+      textElement.textContent = ''; // Clear current text
+      index = 0; // Reset index
+      type(); // Start typing effect
+    }
 
   // Attach the language toggle function to the button
   const languageButton = document.querySelector("#languageButton");

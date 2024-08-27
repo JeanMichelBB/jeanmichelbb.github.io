@@ -90,52 +90,70 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle the message
     console.log('Message from iframe:', event.data);
   });
-
-  // Send a message to the iframe
-  const twitterIframe = document.getElementById('embedded-website-twitter');
-  if (twitterIframe) {
-    twitterIframe.onload = () => {
-      twitterIframe.contentWindow.postMessage('Hello from parent page', 'https://twitterclone.sacenpapier.synology.me/');
+// Function to send a message to the iframe
+function sendMessageToIframe(iframe, message, origin) {
+  if (iframe) {
+    iframe.onload = () => {
+      iframe.contentWindow.postMessage(message, origin);
     };
   }
+}
 
-  function handleIframeLoad(iframeId, fallbackContainerId, serverUrl) {
-    const iframe = document.getElementById(iframeId);
-    const fallbackContainer = document.getElementById(fallbackContainerId);
+// Function to check server status
+function checkServerStatus(url, timeout = 5000) {
+  console.log('Attempting to check server status for:', url);
+  return Promise.race([
+    fetch(url, { method: 'GET' })
+      .then(response => {
+        console.log('Fetch response status:', response.status);
+        return response.ok;
+      }),
+    new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), timeout))
+  ])
+  .catch(error => {
+    console.error('Error checking server status:', error);
+    return false;
+  });
+}
 
-    if (!iframe || !fallbackContainer) return;
+// Function to handle iframe load and server status
+function handleIframeLoad(iframeId, fallbackContainerId, serverUrl, messageElementId, pollingInterval = 5000) {
+  const iframe = document.getElementById(iframeId);
+  const fallbackContainer = document.getElementById(fallbackContainerId);
+  const messageElement = document.getElementById(messageElementId);
 
-    // Check if the server is reachable
-    function checkServerStatus(url, timeout = 5000) { // 5 seconds timeout
-      return Promise.race([
-        fetch(url, { method: 'HEAD' })
-          .then(response => response.ok),
-        new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), timeout))
-      ])
-        .catch(error => {
-          console.error('Server is down:', error);
-          return false;
-        });
-    }
+  if (!iframe || !fallbackContainer || !messageElement) return;
 
+  function updateStatus() {
     checkServerStatus(serverUrl)
       .then(isUp => {
         if (isUp) {
           iframe.style.display = "block";
           fallbackContainer.style.display = "none";
+          messageElement.style.display = "none";
         } else {
           iframe.style.display = "none";
           fallbackContainer.style.display = "block";
+          messageElement.style.display = "block";
+          messageElement.textContent = 'Server is down, please wait...';
+          setTimeout(updateStatus, pollingInterval); // Poll every `pollingInterval` milliseconds
         }
       });
   }
 
-  // For BotWhy iframe
-  handleIframeLoad('embedded-website-botwhy', 'fallbackContainerBotwhy', 'https://botwhy.sacenpapier.synology.me/');
+  updateStatus();
+}
 
-  // For Twitter Clone iframe
-  handleIframeLoad('embedded-website-twitter', 'fallbackContainerTwitter', 'https://twitterclone.sacenpapier.synology.me/');
+// For BotWhy iframe
+handleIframeLoad('embedded-website-botwhy', 'fallbackContainerBotwhy', 'https://botwhy.sacenpapier.synology.me/', 'messageBotwhy');
 
-  // For Grafana iframe
-  handleIframeLoad('embedded-website-grafana', 'fallbackContainerGrafana', 'https://grafana.sacenpapier.synology.me/');
+// For Twitter Clone iframe
+handleIframeLoad('embedded-website-twitter', 'fallbackContainerTwitter', 'https://twitterclone.sacenpapier.synology.me/', 'messageTwitter');
+
+// For Grafana iframe
+handleIframeLoad('embedded-website-grafana', 'fallbackContainerGrafana', 'https://grafana.sacenpapier.synology.me/', 'messageGrafana');
+
+// Optionally send a message to the Twitter iframe after it loads
+const twitterIframe = document.getElementById('embedded-website-twitter');
+sendMessageToIframe(twitterIframe, 'Hello from parent page', 'https://twitterclone.sacenpapier.synology.me/');
 });

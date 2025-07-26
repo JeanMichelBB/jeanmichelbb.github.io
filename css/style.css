@@ -353,6 +353,7 @@ iframe {
 }
 
 
+
 @media screen and (min-width: 768px) {
     .article {
         padding: 0 80px;
@@ -364,7 +365,7 @@ iframe {
     }
 
     main {
-        gap: 60px;
+        gap: 70px;
     }
 
     .carousel-navigation.prev {
@@ -419,4 +420,25 @@ iframe {
     .header-left-text {
         font-size: 25px;
     }
+    
+}
+
+.toggleTwitterProject {
+    background-color: #f4f4f4;
+    border: 2px solid #303030;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: clamp(16px, 1rem + 1vw, 20px);
+    font-weight: bold;
+    color: #303030;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.toggleTwitterProject:hover {
+    background-color: #303030;
+    color: #fff;
+    border-color: #fff;
+    
 }

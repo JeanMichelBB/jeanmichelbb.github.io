@@ -1,7 +1,7 @@
 {
     "en": {
         "name": "Hi, my name is Jean-Michel",
-        "job": "AI Full stack developer",
+        "job": "AI Full stack developer and DevOps",
         "typingText": "Try it on your mobile for the full experience!",
         "projectsLink": "Projects",
         "aboutLink": "About",
@@ -59,7 +59,7 @@
     },
     "fr": {
         "name": "Salut, je m'appelle Jean-Michel",
-        "job": "Développeur full stack IA",
+        "job": "Développeur full stack IA et DevOps",
         "typingText": "Essayez-le sur votre mobile pour une expérience complète!",
         "projectsLink": "Projets",
         "aboutLink": "À propos",

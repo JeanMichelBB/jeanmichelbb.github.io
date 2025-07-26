@@ -114,6 +114,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Start checking server status right away
     updateStatus();
   }
+  document.getElementById('toggleTwitterProject').addEventListener('click', function() {
+  const container = document.getElementById('twitterProjectContainer');
+  const btn = this;
+  
+  if (container.style.display === 'none' || container.style.display === '') {
+    container.style.display = 'block';
+    btn.textContent = 'Close Project';
+  } else {
+    container.style.display = 'none';
+    btn.textContent = 'Show Project';
+  }
+});
 
 }
 );

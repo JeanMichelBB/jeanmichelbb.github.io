@@ -6,369 +6,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Jean-Michel site</title>
+    <meta http-equiv="refresh" content="0; url=https://sacenpapier.org/about">
+    <link rel="canonical" href="https://sacenpapier.org/about">
+    <title>Jean-Michel site — moved</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #09090b;
+            color: #fafafa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            text-align: center;
+        }
+        a {
+            color: #fafafa;
+        }
+        p {
+            max-width: 32em;
+            line-height: 1.5;
+            padding: 0 1.5em;
+        }
+    </style>
+    <script>
+        window.location.replace("https://sacenpapier.org/about");
+    </script>
 </head>
 
 <body>
-    <header id="header" class="site-header">
-        <div class="header-container">
-            <div class="header-left">
-                <div class="image-cropper">
-                    <img src="img/avatar.jpg" alt="logo" class="rounded" />
-                </div>
-            </div>
-            <nav class="header-right">
-                <div class="menu-container">
-                    <a class="menu" href="#projects" id="projectsLink" data-language="en">Projects</a>
-                    <div class="dropdown-menu">
-                        <a href="#BotWhy">BotWhy</a>
-                        <a href="#TwitterClone">Twitter Clone</a>
-                        <a href="#GrafanaDashboard">Grafana Dashboard</a>
-                        <a href="#SimpleStyle">SimpleStyle</a>
-                        <a href="#ImageUploader">Image uploader</a>
-                        <a href="#TodoApplication">Todo application</a>
-                        <a href="#Moviepicks">Moviepicks</a>
-                        <a href="#RandomShowGenerator">Random Show Generator</a>
-                        <a href="#MyDjangoBlog">My Django blog</a>
-                        <a href="#Pokedex">Pokedex</a>
-                        <a href="#KidsGame">Kid's Game</a>
-                        <a href="#StudentEnrollment">Student Enrollment</a>
-                        <a href="#PropertyRental">Property Rental</a>
-                        <a href="#MyWebsite">My website</a>
-                    </div>
-                </div>
-                <a class="menu" href="#about" data-language="en" id="aboutLink">About</a>
-                <a class="menu" href="https://apercu.sacenpapier.org/" data-language="en" id="homeLink">Aperçu</a>
-                <button id="languageButton">fr</button>
-            </nav>
-        </div>
-        <p class="header-left-text" id="typingText"></p>
-    </header>
-    <main>
-        <section class="introduction">
-            <h1 id="name" data-language="en">Hi, my name is Jean-Michel</h1>
-            <h2 id="job" data-language="en">AI Full stack developer and DevOps</h2>
-        </section>
-        <article class="about article" id="about">
-            <h3 class="title" id="aboutTitle" data-language="en">About</h3>
-            <p id="aboutText" data-language="en">
-                As a bilingual full-stack developer with an AEC in Programmer Analyst from Lasalle College, I bring a
-                diverse skill set to the table. My background includes experience as a manager at Jean Coutu pharmacy,
-                along with work in photography and short films. I am adept at taking on new challenges and am highly
-                organized, ensuring projects are completed efficiently and effectively. I also utilize diverse AI tools
-                like OpenAI and Copilot to enhance my learning and application development process, continually growing
-                my expertise in programming and contributing a unique perspective to the industry.
-            </p>
-            <h4 id="skills" class="subtitle" data-language="en">TOOLS & SKILLS</h4>
-            <ul>
-                <li id="programmingLanguages" data-language="en">
-                    <strong>Programming Languages & Frameworks:</strong> HTML, CSS, JavaScript, TypeScript, Tailwind
-                    CSS, React, Fast API, Python
-                </li>
-                <li id="containerizationDevOps" data-language="en">
-                    <strong>Containerization & DevOps:</strong> Docker, Networking, Git, GitHub, Command Line
-                </li>
-                <li id="databases" data-language="en">
-                    <strong>Databases:</strong> MS SQL, PL/SQL, MySQL
-                </li>
-                <li id="operatingSystems" data-language="en">
-                    <strong>Operating Systems:</strong> MacOS, Linux, Windows
-                </li>
-                <li id="projectManagement" data-language="en">
-                    <strong>Project Management:</strong> Scrum, Trello
-                </li>
-                <li id="productivityTools" data-language="en">
-                    <strong>Productivity Tools:</strong> MS Office, Google Workplace
-                </li>
-                <li id="aiTools" data-language="en">
-                    <strong>AI Tools:</strong> OpenAI, Copilot
-                </li>
-            </ul>
-        </article>
-
-
-
-        <article id="projects" class="article">
-            <h3 class="title" id="projectsTitle" data-language="en">Projects</h3>
-
-            <h4 id="BotWhy" class="project-title" id="BotWhy" data-language="en">BotWhy</h4>
-            <iframe id="embedded-website-botwhy" src="https://botwhy.sacenpapier.org/"
-                title="Embedded Website"></iframe>
-            <br>
-            <img class="fallbackImage" src="img/botwhy.png">
-            </div>
-            <br>
-            <ul>
-                <li> <a class="project-description" target="_blank" href="https://botwhy.sacenpapier.org/"
-                        id="botwhyWebsite" data-language="en">Website</a></li>
-                <li> <a class="project-description" target="_blank"
-                        href="https://github.com/JeanMichelBB/BotWhy">GitHub</a></li>
-            </ul>
-            <br>
-            <p class="project-description" id="botwhyDescription" data-language="en">
-                BotWhy is a versatile chatbot application that integrates OpenAI’s GPT-4o Mini,
-                Google Authentication, React with Vite, and Python FastAPI, all powered by MySQL. It offers a seamless
-                conversational
-                interface with robust authentication, ensuring secure and interactive user experiences. Designed for
-                modern deployments,
-                the application is fully Dockerized for easy management and scalability.
-            </p>
-            <br>
-            <br>
-            <h4 id="TwitterClone" class="project-title" data-language="en">Twitter Clone</h4>
-
-            <button class="toggleTwitterProject" id="toggleTwitterProject">Show Project</button>
-
-            <div id="twitterProjectContainer" style="display:none;">
-                <iframe id="embedded-website-twitter" src="https://twitterclone.sacenpapier.org"
-                    title="Embedded Website"></iframe>
-                <br>
-                <img class="fallbackImage" src="img/x.png" alt="Project 1">
-                <br>
-            </div>
-            <ul>
-                <li> <a class="project-description" target="_blank" href="https://twitterclone.sacenpapier.org"
-                        id="twitterWebsite" data-language="en">Website</a></li>
-                <li> <a class="project-description" target="_blank"
-                        href="https://github.com/JeanMichelBB/twitterclone">GitHub</a></li>
-            </ul>
-            <br>
-            <p class="project-description" id="twitterDescription" data-language="en">
-                A Twitter clone developed with React, Fast API, and MySQL. This project includes all essential features
-                of Twitter,
-                such as creating and deleting tweets, following and unfollowing users, and liking tweets. The
-                application is hosted on a ubuntu server.
-            </p>
-            <br>
-            <br>
-            <h4 id="GrafanaDashboard" class="project-title" id="GrafanaDashboard" data-language="en">Grafana Dashboard
-            </h4>
-            <div class="grafana-container">
-                <iframe id="embedded-website-grafana"
-                    src="https://snapshots.raintank.io/dashboard/snapshot/zcU3p7u4s6hH6T29bOku2VeEIYazaKaY"
-                    class="grafana-iframe"></iframe>
-            </div>
-
-            <div class="project-description" id="grafanaDescription" data-language="en">
-                Explore a detailed view of my Linux Ubuntu server’s performance and project status through Grafana. This
-                dashboard provides real-time insights into server metrics, including CPU usage, memory consumption, disk
-                I/O, and network activity. Additionally, it offers comprehensive monitoring of all deployed Docker
-                projects, giving you an overview of container performance, resource usage, and health metrics.
-                Leveraging Grafana’s powerful visualization capabilities, this setup ensures that every aspect of server
-                operation and project deployment is tracked and easily accessible.
-            </div>
-
-            <a target="_blank" href="https://github.com/JeanMichelBB/SimpleStyle">
-                <h4 id="SimpleStyle" class="project-title" id="SimpleStyle" data-language="en">SimpleStyle</h4>
-            </a>
-            <div class="carousel-container">
-                <button class="carousel-navigation prev" onclick="prevSlide()">❮</button>
-
-                <a target="_blank" href="https://github.com/JeanMichelBB/SimpleStyle">
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot1.png" alt="Project 1">
-                        <div class="project-description" id="slide1" data-language="en">Homepage of SimpleStyle:
-                        </div>
-                        <p class="slide1A" id="slide1A" data-language="en">A visually appealing homepage for SimpleStyle
-                            showcasing
-                            various products and categories.
-                        </p>
-                        <p class="slide1B" id="slide1B" data-language="en">This application is powered by React, Fast
-                            API, and
-                            Firebase. All essential functions are
-                            operational. Click on the arrow to see more.</p>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot2.png" alt="Project 2">
-                        <div class="project-description" id="slide2" data-language="en">Login page:
-                            The login page, providing a secure and user-friendly authentication experience.</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot3.png" alt="Project 3">
-                        <div class="project-description" id="slide3" data-language="en">Sign up page:
-                            A registration page for new users, allowing them to create accounts and access additional
-                            features.</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot4.png" alt="Project 4">
-                        <div class="project-description" id="slide4" data-language="en">Selected product page:
-                            Detailed page displaying a selected product, providing comprehensive information for users.
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot5.png" alt="Project 5">
-                        <div class="project-description" id="slide5" data-language="en">All the cards item selected:
-                            A feature-rich page where users can view and manage items selected in their shopping cart.
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot6.png" alt="Project 6">
-                        <div class="project-description" id="slide6" data-language="en">Checkout page:
-                            Seamless checkout experience for users, facilitating a smooth and secure transaction
-                            process.</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot7.png" alt="Project 7">
-                        <div class="project-description" id="slide7" data-language="en">Account page:
-                            Personalized account page allowing users to manage order history, personal information, and
-                            change passwords.</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot8.png" alt="Project 8">
-                        <div class="project-description" id="slide8" data-language="en">About page:
-                            Informational page providing details about SimpleStyle, its mission, and values.</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot9.png" alt="Project 9">
-                        <div class="project-description" id="slide9" data-language="en">Administration page:
-                            Administrative interface allowing authorized users to add and edit products efficiently.
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/Screenshot10.png" alt="Project 10">
-                        <div class="project-description" id="slide10" data-language="en">Firebase database:
-                            Centralized database for SimpleStyle, offering insights into all products and user-related
-                            information stored using Firebase.</div>
-                    </div>
-                </a>
-
-                <button class="carousel-navigation next" onclick="nextSlide()">❯</button>
-            </div>
-            <ul class="project-container">
-                <div class="row-wrapper">
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/image_uploader">
-                            <h4 id="ImageUploader" class="project-title" id="ImageUploader" data-language="en">Image
-                                uploader</h4>
-                            <img src="img/ImageUploader.png" alt="Image uploader">
-                            <p class="project-description" id="imageDescription" data-language="en">React Project.</p>
-                        </a>
-                    </li>
-
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/ToDoListAPI">
-                            <h4 id="TodoApplication" class="project-title" id="TodoApplication" data-language="en">Todo
-                                Application</h4>
-                            <img src="img/Todo.png" alt="Todo application">
-                            <p class="project-description" id="todoDescription" data-language="en">API Project.</p>
-                        </a>
-                    </li>
-                </div>
-                <div class="row-wrapper">
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/Android-Project">
-                            <h4 id="Moviepicks" class="project-title" id="Moviepicks" data-language="en">Moviepicks</h4>
-                            <img src="img/moviepicks.png" alt="Image uploader">
-                            <p class="project-description" id="movieDescription" data-language="en">Android Project as
-                                part of the course MOBILE DEVELOPMENT.</p>
-                        </a>
-                    </li>
-
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/Randoms-Series-Project">
-                            <h4 id="RandomShowGenerator" class="project-title" id="RandomShowGenerator"
-                                data-language="en">Random Show Generator</h4>
-                            <img src="img/Show.png" alt="Todo application">
-                            <p class="project-description" id="randomDescription" data-language="en">Java Project
-                                developed with Spring Boot.</p>
-                        </a>
-                    </li>
-                </div>
-                <div class="row-wrapper">
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/My_Django_blog">
-                            <h4 id="MyDjangoBlog" class="project-title" id="MyDjangoBlog" data-language="en">My Django
-                                blog</h4>
-                            <img src="img/MyDjangoblog.png" alt="My Django blog">
-                            <p class="project-description" id="djangoDescription" data-language="en">Python Project as
-                                part of the course SCRIPTING LANGUAGE.</p>
-                        </a>
-                    </li>
-
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/ios-project">
-                            <h4 id="Pokedex" class="project-title" id="Pokedex" data-language="en">Pokedex</h4>
-                            <img src="img/Pokedex.png" alt="Pokedex">
-                            <p class="project-description" id="pokedexDescription" data-language="en">Swift Project as
-                                part of the course IOS MOBILE DEVELOPMENT.
-                            </p>
-                        </a>
-                    </li>
-                </div>
-                <div class="row-wrapper">
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/php-kids-game">
-                            <h4 id="KidsGame" class="project-title" id="KidsGame" data-language="en">Kid's Game</h4>
-                            <img src="img/kidsGame.png" alt="Kid's Game">
-                            <p class="project-description" id="kidsDescription" data-language="en">PHP Project as part
-                                of the course WEB SERVER APPLICATIONS
-                                DEVELOPMENT.</p>
-                        </a>
-                    </li>
-
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/studentEnrolment">
-                            <h4 id="StudentEnrollment" class="project-title" id="StudentEnrollment" data-language="en">
-                                Student Enrollment</h4>
-                            <img src="img/studentEnrolment.png" alt="Student Enrollment">
-                            <p class="project-description" id="studentDescription" data-language="en">C# Project as part
-                                of the course MULTI-TIER APPLICATIONS
-                                DEVELOPMENT. </p>
-                        </a>
-                    </li>
-                </div>
-                <div class="row-wrapper">
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/final-project-web">
-                            <h4 id="PropertyRental" class="project-title" id="PropertyRental" data-language="en">
-                                Property Rental</h4>
-                            <img src="img/Rental.png" alt="Image uploader">
-                            <p class="project-description" id="propertyDescription" data-language="en">C# Project as
-                                part of the course WEB APPLICATIONS
-                                DEVELOPMENT.</p>
-                        </a>
-                    </li>
-
-                    <li class="project">
-                        <a target="_blank" href="https://github.com/JeanMichelBB/jeanmichelbb.github.io">
-                            <h4 id="MyWebsite" class="project-title" id="MyWebsite" data-language="en">My website</h4>
-                            <img src="img/website.png" alt="Website">
-                            <p class="project-description" id="websiteDescription" data-language="en">My website
-                                developed with HTML, and CSS.</p>
-                        </a>
-                    </li>
-                </div>
-            </ul>
-        </article>
-
-    </main>
-    <div class="bottom-nav">
-        <a target="_blank" class="social-link" href="https://github.com/JeanMichelBB" rel="noopener noreferrer"
-            target="_blank">
-            <svg fill-rule="evenodd" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                    d="M11.7852 0.291163C5.30332 0.291163 0 5.5321 0 11.9377C0 17.033 3.38823 21.4005 8.1023 23.0019C8.69156 23.1475 8.83888 22.7107 8.83888 22.4195C8.83888 22.1284 8.83888 21.4005 8.83888 20.3814C5.59795 21.1093 4.86138 18.9256 4.86138 18.9256C4.27212 17.6154 3.53555 17.1786 3.53555 17.1786C2.50435 16.4507 3.68286 16.4507 3.68286 16.4507C4.86138 16.5963 5.45064 17.6154 5.45064 17.6154C6.48184 19.5079 8.24962 18.9256 8.83888 18.6344C8.98619 17.9065 9.28082 17.3242 9.57545 17.033C6.92379 16.7419 4.27212 15.7228 4.27212 11.2098C4.27212 9.89954 4.71407 8.88047 5.45064 8.15256C5.30332 7.8614 4.86138 6.69675 5.59795 5.09535C5.59795 5.09535 6.62916 4.80419 8.83888 6.26C9.72276 5.96884 10.754 5.82326 11.7852 5.82326C12.8164 5.82326 13.8476 5.96884 14.7315 6.26C16.9412 4.80419 17.9724 5.09535 17.9724 5.09535C18.5616 6.69675 18.267 7.8614 18.1197 8.15256C18.8563 9.02605 19.2982 10.0451 19.2982 11.2098C19.2982 15.7228 16.4992 16.5963 13.8476 16.8874C14.2895 17.4698 14.7315 18.1977 14.7315 19.2168C14.7315 20.8181 14.7315 21.9828 14.7315 22.4195C14.7315 22.7107 14.8788 23.1475 15.6153 23.0019C20.3294 21.4005 23.7176 17.033 23.7176 11.9377C23.5703 5.5321 18.267 0.291163 11.7852 0.291163Z">
-                </path>
-            </svg>
-        </a>
-        <a target="_blank" class="social-link" href="https://www.linkedin.com/in/jeanmichelbb/"
-            rel="noopener noreferrer" target="_blank">
-            <svg fill-rule="evenodd" viewBox="0 0 25 24" fill="currentColor">
-                <path
-                    d="M22.2854 2.78829e-05H1.83465C1.60476 -0.00314007 1.3765 0.0387273 1.1629 0.123242C0.949292 0.207769 0.754527 0.333287 0.589738 0.492633C0.424938 0.651979 0.293336 0.842032 0.202443 1.05195C0.111549 1.26185 0.0631508 1.4875 0.0599999 1.716V22.2837C0.0631508 22.5122 0.111549 22.7379 0.202443 22.9478C0.293336 23.1577 0.424938 23.3477 0.589738 23.5071C0.754527 23.6665 0.949292 23.792 1.1629 23.8765C1.3765 23.9611 1.60476 24.0028 1.83465 23.9997H22.2854C22.5152 24.0028 22.7435 23.9611 22.9571 23.8765C23.1707 23.792 23.3655 23.6665 23.5303 23.5071C23.6951 23.3477 23.8266 23.1577 23.9175 22.9478C24.0085 22.7379 24.0569 22.5122 24.06 22.2837V1.716C24.0569 1.4875 24.0085 1.26185 23.9175 1.05195C23.8266 0.842032 23.6951 0.651979 23.5303 0.492633C23.3655 0.333287 23.1707 0.207769 22.9571 0.123242C22.7435 0.0387273 22.5152 -0.00314007 22.2854 2.78829e-05ZM7.33968 20.0878H3.71795V9.2879H7.33968V20.0878ZM5.52881 7.77592C5.02933 7.77592 4.55031 7.57869 4.19711 7.22764C3.84394 6.87657 3.64551 6.40043 3.64551 5.90395C3.64551 5.40747 3.84394 4.93132 4.19711 4.58026C4.55031 4.2292 5.02933 4.03197 5.52881 4.03197C5.79404 4.00207 6.06263 4.02819 6.317 4.10863C6.57135 4.18906 6.80576 4.322 7.00486 4.49872C7.20395 4.67544 7.36326 4.89198 7.47232 5.13413C7.58139 5.3763 7.63777 5.63863 7.63777 5.90395C7.63777 6.16926 7.58139 6.43159 7.47232 6.67376C7.36326 6.91592 7.20395 7.13245 7.00486 7.30917C6.80576 7.4859 6.57135 7.61883 6.317 7.69927C6.06263 7.7797 5.79404 7.80581 5.52881 7.77592ZM20.4021 20.0878H16.7803V14.2918C16.7803 12.8399 16.2612 11.8919 14.9453 11.8919C14.5381 11.8949 14.1415 12.0218 13.8091 12.2557C13.4767 12.4896 13.2244 12.8191 13.0862 13.1998C12.9916 13.4818 12.9507 13.779 12.9654 14.0758V20.0758H9.3437C9.3437 20.0758 9.3437 10.2599 9.3437 9.2759H12.9654V10.7999C13.2944 10.2324 13.773 9.76489 14.3494 9.44774C14.926 9.13056 15.5786 8.97572 16.2371 8.9999C18.6515 8.9999 20.4021 10.5479 20.4021 13.8718V20.0878Z">
-                </path>
-            </svg>
-        </a>
-    </div>
-    <div class="bottom-nav-right">
-        <a href="#header">▲</a>
-    </div>
-    <footer>
-        <p>&copy; </p>
-        <p class="credits" id="credits" data-language="en">2024 - Made by Jean-Michel Bérubé</p>
-    </footer>
-    <script src="js/script.js"></script>
+    <p>
+        This site has moved.<br>
+        Redirecting to <a href="https://sacenpapier.org/about">sacenpapier.org/about</a>&hellip;
+    </p>
 </body>
 
 </html>
